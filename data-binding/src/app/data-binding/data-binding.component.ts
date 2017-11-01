@@ -18,7 +18,7 @@ export class DataBindingComponent implements OnInit {
 
   getValor(){
     return 1;
-  }
+  }s
 
   getCursoAngular(){
     return true;
