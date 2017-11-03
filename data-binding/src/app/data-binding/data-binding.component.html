@@ -102,6 +102,10 @@
 
     <app-cursos [nome]="nomeCurso"></app-cursos>
 
+    <contador [valor]="valorInicial" 
+      (mudouValor) = "onMudouValor($event)">
+    </contador>
+
   </article>
 
 </section>
