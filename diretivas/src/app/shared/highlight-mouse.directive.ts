@@ -6,8 +6,8 @@ import { Directive, Renderer, ElementRef, HostListener,HostBinding} from '@angul
 export class HighlightMouseDirective {
 
   constructor(
-    private _renderer : Renderer,
-    private _elementeRef : ElementRef
+    // private _renderer : Renderer,
+    // private _elementeRef : ElementRef
   ){}
 
   @HostListener('mouseenter') onMouseOver(){
