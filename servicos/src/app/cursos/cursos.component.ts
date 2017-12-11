@@ -10,14 +10,15 @@ import { CursosService } from './cursos.service';
 export class CursosComponent implements OnInit {
 
   cursos: string[] =[];
-  cursosService : CursosService;
+  //cursosService : CursosService;
 
-  constructor() {
-    this.cursosService = new CursosService();
+  constructor(private _cursoService : CursosService ) {
+    //this.cursosService = new CursosService();
+    //this.cursosService = _cursoService;
    }
 
   ngOnInit() {
-    this.cursos = this.cursosService.getCursos();
+    this.cursos = this._cursoService.getCursos();
   } 
 
 }
