@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { CursosService } from '../cursos/cursos.service';
 import { CursosComponent } from './cursos.component';
+import { LogService } from '../shared/log.service';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { CursosComponent } from './cursos.component';
   ],
   exports:[
     CursosComponent 
-  ]//,
+  ],
+  providers:[LogService]
   //providers: [CursosService]
 })
 export class CursosModule { }
