@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 
 import { CursosService } from './cursos.service';
@@ -19,7 +20,15 @@ export class CursosComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.cursos = this._cursoService.getCursos();
+    
+    CursosService.criouNovoCurso.subscribe(
+          curso => this.cursos.push(curso)
+      
+      // function(curso){
+      //   console.log(curso);
+      // }
+
+    );
   } 
 
 }
