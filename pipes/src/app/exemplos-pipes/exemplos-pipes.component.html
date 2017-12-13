@@ -1,0 +1,12 @@
+<h1>LIVRO</h1>
+
+<p>Titulo: {{livro.titulo | uppercase}}</p>
+<p>Avaliacao: {{livro.avaliacao | number:'1.1-1'}}</p>
+<p>Numero de páginas: {{livro.numeroPaginas | number}}</p>
+<p>Preço: {{livro.preco | currency:'BRL':true}}</p>
+<p>Data de Lançamento: {{livro.dataLancamento | date:'dd-MMM-yyyy'}}</p>
+<p>URL: {{livro.url}}</p>
+<br>
+<p>
+    Livro:{{livro | json}}
+</p>
