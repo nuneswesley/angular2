@@ -7,6 +7,15 @@
 <p>Data de Lançamento: {{livro.dataLancamento | date:'dd-MMM-yyyy'}}</p>
 <p>URL: {{livro.url}}</p>
 <br>
-<p>
-    Livro:{{livro | json}}
-</p>
+<p>Livro:{{livro | json}}</p>
+
+<input type="text" [(ngModel)]="filtro" >
+<br>
+<input type="text" #novoValor>
+<button (click)= "addCurso(novoValor.value)">Add Curso</button>
+
+<ul>
+    <li *ngFor="let liv of livros | filtroArray:filtro" >
+        {{ liv }}
+    </li>
+</ul>

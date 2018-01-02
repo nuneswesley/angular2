@@ -14,6 +14,14 @@ export class ExemplosPipesComponent implements OnInit {
     preco : 98.58,
     dataLancamento : new Date(2016,5,23),
     url: 'www.globo.com'
+  };
+
+  livros : string[] = ['ASP.NET CORE', 'Angular2'];
+  filtro : string;
+
+  addCurso(valor){
+    this.livros.push(valor);
+    console.log(this.livros);
   }
 
   constructor() { }
