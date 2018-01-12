@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AlunosComponent } from './alunos.component';
 import { AlunoFormComponent } from './aluno-form/aluno-form.component';
 import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
 import { AlunosRountingModule } from './alunos.routing.module';
-import { FormsModule } from '@angular/forms';
+import { AlunosService } from './alunos.service';
 
 @NgModule({
     imports:[
@@ -18,7 +19,7 @@ import { FormsModule } from '@angular/forms';
         AlunosComponent, 
         AlunoFormComponent, 
         AlunoDetalheComponent],
-    providers:[],
+    providers:[AlunosService],
 })
 
 export class AlunosModule {}
